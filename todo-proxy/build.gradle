@@ -33,9 +33,12 @@ dependencies {
     compile 'org.codehaus.groovy:groovy'
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-devtools"
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-zuul:2.0.0.RELEASE"
 
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
     testCompile("junit:junit")
 }
 
+bootJar.dependsOn ":todo-js:npm_run_build"
+bootWar.dependsOn ":todo-js:npm_run_build"

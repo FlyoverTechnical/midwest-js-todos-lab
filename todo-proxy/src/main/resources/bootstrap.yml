@@ -1,0 +1,8 @@
+zuul:
+  routes:
+    todos:
+      path: /todos/**
+      stripPrefix: false
+      url: http://localhost:8888
+  ignored-patterns: /app/**
+  prefix: /api
