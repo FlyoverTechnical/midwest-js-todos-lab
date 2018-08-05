@@ -1,11 +1,19 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
   const devMode = argv.mode === "development";
+  const bootStaticDirectory = path.resolve(
+    __dirname,
+    "../todo-proxy/src/main/resources/static"
+  );
 
   let outputPath = path.resolve(__dirname, "dist");
+  if (!devMode) {
+    outputPath = bootStaticDirectory;
+  }
 
   return {
     devtool: "cheap-eval-source-map",
@@ -33,6 +41,10 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
+      new CleanWebpackPlugin(["dist", bootStaticDirectory], {
+        watch: devMode,
+        allowExternal: true
+      }),
       new MiniCssExtractPlugin({
         filename: "[name].[hash].css",
         chunkFilename: "[id].[hash].css"

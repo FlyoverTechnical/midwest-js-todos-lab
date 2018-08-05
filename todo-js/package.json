@@ -4,6 +4,7 @@
   "description": "Todos project for MidwestJS",
   "main": "webpack.config.js",
   "scripts": {
+    "build": "webpack --mode production",
     "data": "json-server --watch ./data/db.json --routes ./data/routes.json --port 8888",
     "serve": "webpack-dev-server --mode development"
   },
