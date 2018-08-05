@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "data": "json-server --watch ./data/db.json --routes ./data/routes.json --port 8888",
+    "dev": "webpack --mode none --watch",
     "serve": "webpack-dev-server --mode development"
   },
   "author": "your name",

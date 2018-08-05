@@ -4,14 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
-  const devMode = argv.mode === "development";
+  const watchMode = argv.mode === "none";
+  const devMode = argv.mode === "development" || watchMode;
   const bootStaticDirectory = path.resolve(
     __dirname,
     "../todo-proxy/src/main/resources/static"
   );
 
   let outputPath = path.resolve(__dirname, "dist");
-  if (!devMode) {
+  if (watchMode || !devMode) {
     outputPath = bootStaticDirectory;
   }
 

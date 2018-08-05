@@ -40,5 +40,14 @@ dependencies {
     testCompile("junit:junit")
 }
 
-bootJar.dependsOn ":todo-js:npm_run_build"
-bootWar.dependsOn ":todo-js:npm_run_build"
+task buildDev(type: org.gradle.api.tasks.GradleBuild) {
+    tasks = ["build"]
+    doFirst() {
+        System.setProperty('spring.profiles.active', 'dev')
+    }
+}
+
+if (System.getProperty('spring.profiles.active') != 'dev') {
+    bootJar.dependsOn ":todo-js:npm_run_build"
+    bootWar.dependsOn ":todo-js:npm_run_build"
+}
