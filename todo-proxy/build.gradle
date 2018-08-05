@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE")
+    }
+}
+
+// TODO - apply plugins
+
+bootJar {
+    baseName = 'midwestjs-todos'
+    version =  '0.0.1'
+}
+
+bootWar {
+    baseName = 'midwestjs-todos'
+    version = '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// TODO - set dependencies

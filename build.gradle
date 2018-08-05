@@ -1,0 +1,4 @@
+allprojects {
+    // General plugins for all sub-projects
+    apply plugin: 'idea'
+}
