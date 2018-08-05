@@ -1,1 +1,4 @@
-// TODO - set root project name and include modules
+rootProject.name = 'midwest-js-todos'
+
+include 'todo-js'
+include 'todo-proxy'

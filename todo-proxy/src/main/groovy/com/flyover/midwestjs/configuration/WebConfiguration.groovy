@@ -10,6 +10,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 class WebConfiguration {
     static final String INDEX_HTML = 'index.html'
 
-    // TODO - Register view controllers for /app to index.html
+    @Bean
+    WebMvcConfigurer forwardToIndex() {
+        new WebMvcConfigurer() {
+            @Override
+            void addViewControllers(ViewControllerRegistry registry) {
+                // Resolve requests to / and /app to index.html so that HTML5 routing works
+                registry
+                    .addRedirectViewController("/", "/app")
+
+                registry
+                    .addViewController("/app/**")
+                    .setViewName(INDEX_HTML)
+            }
+        }
+    }
 }
 

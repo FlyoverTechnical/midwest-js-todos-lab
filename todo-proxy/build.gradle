@@ -7,7 +7,10 @@ buildscript {
     }
 }
 
-// TODO - apply plugins
+apply plugin: 'groovy'
+apply plugin: 'war'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'midwestjs-todos'
@@ -26,4 +29,13 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-// TODO - set dependencies
+dependencies {
+    compile 'org.codehaus.groovy:groovy'
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-devtools"
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    testCompile("junit:junit")
+}
+
