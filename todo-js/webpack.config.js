@@ -44,7 +44,14 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       port: 8080,
-      historyApiFallback: true
+      historyApiFallback: true,
+      proxy: {
+        "/api/**": {
+          target: "http://localhost:8888",
+          changeOrigin: true,
+          secure: false
+        }
+      }
     }
   };
 };

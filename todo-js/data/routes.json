@@ -1,0 +1,7 @@
+{
+  "/api/*": "/$1",
+  "/todos": "/todos?_embed=items",
+  "/todos/:id": "/todos/:id",
+  "/todos/:id/items": "/todos/:id/items",
+  "/todos/:todoId/items/:itemId": "/items/:itemId"
+}
