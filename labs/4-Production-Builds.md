@@ -2,6 +2,13 @@
 
 1. Convert Webpack's output location based upon environment
 
+- Since `outputPath` is currently configured at `dist`, run the build and see the bundles.
+
+*todo-js directory*
+```bash
+npx webpack --mode production
+```
+
 *todo-js/webpack.config.js*
 
 ```javascript
@@ -69,7 +76,7 @@ npm_run_build.dependsOn npmInstall
 
 5. In the **root** directory, run build and then run app via Gradle wrapper
 
-*midwest-js-todos-lab*
+*midwest-js-todos-lab root folder*
 
 ```bash
 ./gradlew npm_run_build
@@ -82,3 +89,11 @@ npm_run_build.dependsOn npmInstall
 6. See the 404 error because we haven't set the proxy up yet..
 
 ![404 error](./images/lab-4-404-error.png)
+
+7. Commit the changes
+
+```bash
+git add .
+
+git commit -m 'production build created for todos'
+```
