@@ -1,8 +1,13 @@
 # Javascript Module Setup
 
 1. Review the JS project
+  - [NPM: Node's package manager](https://www.npmjs.com/)
+  - [Webpack: Bundler](https://webpack.js.org/)
+  - [JS Modules in Browsers](https://jakearchibald.com/2017/es-modules-in-browsers/)
 
 2. Initialize NPM project
+
+*todo-js folder*
 
 ```bash
 npm init
@@ -83,7 +88,6 @@ npm install
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = (env, argv) => {
   const devMode = argv.mode === "development";
@@ -135,7 +139,9 @@ module.exports = (env, argv) => {
 
 4. Configure Babel
 
-*todo-js/.babelrc
+  - [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env/)
+
+*todo-js/.babelrc*
 
 ```javascript
 {
@@ -172,3 +178,11 @@ npm run serve
 8. Verify App Displays at `http://localhost:8080/app`
 
 ![Lab 2 Result](./images/lab-2-success.png)
+
+9. Commit your changes to Git
+
+```bash
+git add .
+
+git commit -m 'webpack configuration setup and builds successfully'
+```
