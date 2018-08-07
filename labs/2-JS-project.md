@@ -7,6 +7,8 @@
 
 2. Initialize NPM project
 
+*todo-js folder*
+
 ```bash
 npm init
 ```
@@ -137,7 +139,9 @@ module.exports = (env, argv) => {
 
 4. Configure Babel
 
-*todo-js/.babelrc
+  - [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env/)
+
+*todo-js/.babelrc*
 
 ```javascript
 {
@@ -174,3 +178,11 @@ npm run serve
 8. Verify App Displays at `http://localhost:8080/app`
 
 ![Lab 2 Result](./images/lab-2-success.png)
+
+9. Commit your changes to Git
+
+```bash
+git add .
+
+git commit -m 'webpack configuration setup and builds successfully'
+```
