@@ -41,6 +41,10 @@ zuul:
       path: /todos/**
       stripPrefix: false
       url: http://localhost:8888
+    items:
+      path: /items/**
+      stripPrefix: false
+      url: http://localhost:8888
   ignored-patterns: /app/**
   prefix: /api
 ```
@@ -56,5 +60,16 @@ npm run data
 ```
 
 5. Verify that the Proxy is working
+  - Check and uncheck todos
+  - Add new todos
+  - Add new todo lists
 
 ![Working Application](./images/lab-5-success.png)
+
+6. Commit your changes
+
+```bash
+git add .
+
+git commit -m 'Added a Zuul proxy for Api calls'
+```

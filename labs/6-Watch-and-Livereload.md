@@ -10,6 +10,9 @@
 ```
 
 2. Setup Webpack to build a development bundle in the `static` folder.
+  - **development** mode is for `webpack-dev-server` and isolated development
+  - **production** mode is for packaging application with Spring application
+  - **none** mode is for building the JS in development, but deploying via Spring Boot
 
 *todo-js/webpack.config.js*
 
