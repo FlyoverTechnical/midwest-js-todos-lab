@@ -102,4 +102,16 @@ dependencies {
 
 7. Run App and see page
 
+```bash
+./gradlew bootRun
+```
+
 ![Succes Page](./images/success-html.png)
+
+8. Commit your changes
+
+```bash
+git add .
+
+git commit -m 'Spring boot proxy application created successfully'
+```
