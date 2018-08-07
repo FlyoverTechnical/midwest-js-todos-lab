@@ -81,6 +81,17 @@ devServer: {
 }
 ```
 
-4. Have fun with the app.
+4. Have fun with the app and look at `db.json` to see how the data changes in real time.
+  - Check and uncheck todos
+  - Add new todos
+  - Add new todo lists
 
 ![Lab 3 Success](./images/lab-3-success.png)
+
+5. Commit your changes
+
+```bash
+git add .
+
+git commit -m 'json-server and configuration added to application'
+```
