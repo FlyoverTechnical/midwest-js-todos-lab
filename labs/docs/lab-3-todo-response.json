@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Midwest JS Workshop",
+    "id": 1,
+    "items": [
+      {
+        "name": "Create project(s)",
+        "todoId": 1,
+        "id": 4,
+        "completed": true
+      },
+      {
+        "name": "Finish presentation",
+        "todoId": 1,
+        "id": 16
+      },
+      {
+        "name": "Have fun",
+        "todoId": 1,
+        "id": 17
+      },
+      {
+        "name": "Eat some food",
+        "todoId": 1,
+        "id": 18
+      }
+    ]
+  }
+]
