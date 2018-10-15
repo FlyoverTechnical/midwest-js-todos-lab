@@ -144,10 +144,10 @@ module.exports = (env, argv) => {
 
 ```javascript
 {
-  "presets": [ "env", "react"],
+  "presets": [ "@babel/env", "@babel/react"],
   "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread"
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
   ]
 }
 ```
